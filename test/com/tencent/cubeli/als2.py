@@ -11,18 +11,19 @@ def getab(fileName):
     y_b=0.0;x_b=0.0;bcount=0
     for line in fr.readlines():
         lineArr=line.strip().split()
-        print len(lineArr)
+        # print len(lineArr)
         if len(lineArr)==0:
             break
-        xy_a += lineArr[1]*lineArr[2];x2_a += lineArr[1]*lineArr[1];x_a += lineArr[1]
-        y_b += lineArr[2];x_b += lineArr[1];bcount += 1
+        xy_a += float(lineArr[1]) * float(lineArr[2]);x2_a += float(lineArr[1]) * float(lineArr[1]);x_a += float(lineArr[1])
+        y_b += float(lineArr[2]);x_b += float(lineArr[1]);bcount += 1
 
     c11=x2_a*x_b;c12=x_a*x_b
     c21=x_b*x2_a;c22=0-bcount*x2_a
     d=xy_a-y_b
     b=(d/(c12+c22))
     a=(b+y_b)/x_b
-    print a + " " + b
+    print a
+    print b
 
 
 def drawScatterDiagram(fileName):

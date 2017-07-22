@@ -4,7 +4,7 @@ import os
 import matplotlib.pyplot as plt
 
 def getab(fileName):
-    os.chdir("E:\\bigdata\\ml\\als\\data")
+    os.chdir("D:\\bigdata\\ml\\mltest\\data")
     xcord = [];ycord = []
     fr = open(fileName)
     xy_a=0.0;x2_a=0.0;x_a=0.0
